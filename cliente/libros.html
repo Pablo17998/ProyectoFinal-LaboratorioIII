@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Libreria Llena</title>
+        <link rel="stylesheet" href="libros.css">
+        <style>
+            a {
+                text-decoration: none;
+            }
+
+            /*header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            }
+        
+            .logo {
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            animation: slideDown 1s ease-in-out;
+            transition: 2s;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .navbar a {
+                position: relative;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 500;
+                text-decoration: none;
+                margin-left: 40px;
+            }
+
+            .navbar a::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background: #fff;
+                transition: .5s;
+            }
+
+            .navbar a:hover::before {
+                width: 100%;
+            }*/
+        </style>
+    </head>
+
+    <body>
+        <!--<header>
+            <a href="#" class="logo">LIBRERIA SAVIGOD</a>
+
+            <nav class="navbar">
+                <a href="tienda.html">Inicio</a>
+                <a href="libros.php">Libros</a>
+                <a href="#" id="contactLink">Contacto</a>
+                <a href="login.php">Login</a>
+            </nav>
+        </header>-->
+
+        <div class="library-container">
+            <div class="book-card">
+                <img src="harrypotter.webp" alt="Portada del Libro 1" id="l1_img" class="book-cover" value="Harry Potter y El Prisionero de Azkaban">
+                <p class="book-description">Hogwarts se ve amenazado por la fuga deSirius Black de la prisión de Azkaban. Un asesino capaz de cualquier cosa</p> 
+                <a class="buy-button" id="l1_precio" value="18.99" onclick="get1()">$18.99</a>
+            </div>
+            <div class="book-card">
+                <img src="estrellaa.jpg" alt="Portada del Libro 2" class="book-cover" id="l2_img" value="Bajo la Misma Estrella">
+                <p class="book-description">Dos adolescentes pacientes de cáncer inicianun viaje para reafirmar sus vidas. Una historia que te hara ver de otraforma tu vida.</p>
+                <a class="buy-button" id="l2_precio" value="17.99" onclick="get2()">$17.99</a>
+            </div>
+            <div class="book-card">
+                <img src="mazerunner.jpg" alt="Portada del Libro 3" class="book-cover" id="l3_img" value="Maze Runner: La Cura Mortal">
+                <p class="book-description">Thomas, un adolescente al que le borraron lamemoria, ha sido encerrado en un laberinto plagado de monstruos.</p>
+                <a  class="buy-button" id="l3_precio" value="16.99" onclick="get3()">$16.99</a>
+            </div>
+            <div class="book-card">
+                <img src="vinlandd.jfif" alt="Portada del Libro 4" class="book-cover"  id="l4_img" value="Vinland Saga">
+                <p class="book-description">Thorfinn y su camino para vengarse de lamuerte de su padre en batalla. En busqueda de venganza Thorfinn esencontrado por la bondad.</p>
+                <a  class="buy-button" id="l4_precio" value="15.99" onclick="get4()">$15.99</a>
+            </div>
+            <div class="book-card">
+                <img src="diario.jfif" alt="Portada del Libro 5" class="book-cover" id="l5_img" value="El Diario de Noa">
+                <p class="book-description">La historia de dos jóvenes de distintasclases sociales que se enamoraron y de cómo fueron separados.</p>
+                <a  class="buy-button" id="l5_precio" value="9.99" onclick="get5()">$9.99</a>
+            </div>
+            <div class="book-card">
+                <img src="wick.jpg" alt="Portada del Libro 6" class="book-cover" id="l6_img" value="John Wick: Special Edition">
+                <p class="book-description" >John Wick, regresa de su retiro paraenfrentar a los mafiosos rusos que destruyeron todo aquello que él amaba.Ahora ya no tiene nada que perder, lleno de dolor e ira contenida ahorasolo busca quitar lo que a el le arrebataron.</p>
+                <a  class="buy-button" value="8.99" onclick="get6()" id="l6_precio">$8.99</a>
+            </div>
+            <div class="book-card">
+                <img src="javier.webp" alt="Portada del Libro 7" class="book-cover" id="l7_img" value="El Cuco de Cristal">
+                <p class="book-description">Un trasplante de urgencia y un donante queoculta una cantidad considerable de delicados secretos. Una historia quete dejara pensando.</p>
+                <a  class="buy-button" value="7.99" onclick="get7()" id="l7_precio">$7.99</a>
+            </div>
+            <div class="book-card">
+                <img src="cielo.webp" alt="Portada del Libro 8" class="book-cover">
+                <p class="book-description" id="l8_img" value="Bajo un Blanco Cielo" >Elizabeth Kolbert, ella explora las formas enque los humanos luchan con los desafíos ambientales que han creado cadauno de los seres humanos.</p>
+                <a  id="l8_precio" class="buy-button" value="6.99" onclick="get8()">$6.99</a>
+            </div>
+            <div class="book-card">
+                <img src="julio.jpg" alt="Portada del Libro 9" class="book-cover">
+                <p class="book-description" id="l9_img" value="Viaje al Centro de la Tierra" >El joven Axel y su tío, el profesor Otto,emprenden un viaje fantástico al interior de la Tierra en un sin fin denuevos misterios y cosas desconocidas</p>
+                <a  id="l9_precio" class="buy-button" value="5.99" onclick="get9()">$5.99</a>
+            </div>
+            <div class="book-card">
+                <img src="greg.jfif" alt="Portada del Libro 10" class="book-cover">
+                <p class="book-description" id="l10_img" value="El Diario de Greg: Un Pringao Total" >Las aventuras del preadolescente GregHeffley, en unos de los período más terrorífico de la vida de cualquierpersona: la escuela ¿podra sobrevivir? Averigualo</p>
+                <a  id="l10_precio" class="buy-button" value="4.99" onclick="get10()">$4.99</a>
+            </div>
+        </div>
+
+        <script>
+            function get1() {
+                const precio = document.getElementById('l1_precio').getAttribute('value');
+                const titulo = document.getElementById('l1_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get2() {
+                const precio = document.getElementById('l2_precio').getAttribute('value');
+                const titulo = document.getElementById('l2_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get3() {
+                const precio = document.getElementById('l3_precio').getAttribute('value');
+                const titulo = document.getElementById('l3_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get4() {
+                const precio = document.getElementById('l4_precio').getAttribute('value');
+                const titulo = document.getElementById('l4_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get5() {
+                const precio = document.getElementById('l5_precio').getAttribute('value');
+                const titulo = document.getElementById('l5_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get6() {
+                const precio = document.getElementById('l6_precio').getAttribute('value');
+                const titulo = document.getElementById('l6_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get7() {
+                const precio = document.getElementById('l7_precio').getAttribute('value');
+                const titulo = document.getElementById('l7_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get8() {
+                const precio = document.getElementById('l8_precio').getAttribute('value');
+                const titulo = document.getElementById('l8_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get9() {
+                const precio = document.getElementById('l9_precio').getAttribute('value');
+                const titulo = document.getElementById('l9_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            function get10() {
+                const precio = document.getElementById('l10_precio').getAttribute('value');
+                const titulo = document.getElementById('l10_img').getAttribute('value');
+
+                localStorage.setItem('precio', precio);
+                localStorage.setItem('titulo', titulo);
+
+                window.location.href = 'tienda.php';
+            }
+            
+        </script>
+    </body>
+</html>

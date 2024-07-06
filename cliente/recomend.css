@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border box;
+}
+
+body {
+    margin: 0;
+    background-color:#292828;
+}
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container {
+    color: #ffe;
+    width: 400px;
+    margin: 0 auto;
+}
+
+section article:hover {
+    box-shadow: 0 0.1rem 0.4rem rgb(255, 255, 255);
+}
+
+section article {
+    transition: box-shadow 0.3s ease;
+    background-color: #797676;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+section article h2, section article p {
+    margin: 1rem;
+}
+
+footer {
+    background-color: #303a42;
+    padding: 3rem;
+    color:#fff;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: cornflowerblue;
+}
+
+.cta-button {
+    background-color: #5a00ff; /* Ajusta el color según sea necesario */
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background-color 0.7s;
+  }
+  
+  .cta-button:hover {
+    background-color: #190146; /* Ajusta el color del hover según sea necesario */
+}

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("purple.jpg")  no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    animation: slideDown 1s ease-in-out;
+    transition: 2s;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 50;
+    text-decoration: none;
+    margin-left: 40px;            
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: .5s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla 
+}
+
+.main-title h1 {
+    font-size: 48px;
+    color: #fff;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla 
+    flex-direction: column;
+    color: #fff; /* Asegura que el texto sea blanco por defecto 
+}
+
+.main-title h1 {
+    border: black 10px;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, #210258);
+    background-clip: text;
+    color: #dacbcb;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.main-title p {
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: 10px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animación de desvanecimiento 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cta-button {
+    background-color: #5a00ff; /* Ajusta el color según sea necesario 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background-color 0.7s;
+  }
+  
+  .cta-button:hover {
+    background-color: #190146; /* Ajusta el color del hover según sea necesario 
+}
+
+/** .container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.section article {
+    background-color: #000000;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+*
+footer {
+    background-color: #2222;
+    padding: 3rem;
+    color:#fff;
+}
+*/
